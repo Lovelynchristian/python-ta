@@ -4,6 +4,16 @@ import os
 
 def palindrome(s):
     # your code goes here
+    if s == None:
+        return False
+
+    s = s.lower()
+
+    strLength = len(s)
+    for i in range(math.floor(s)):
+        if s[i] != s[strLength - 1 - i]:
+            return False
+    return True
 
 def solution(s):
     return palindrome(s)
